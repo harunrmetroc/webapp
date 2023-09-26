@@ -1,0 +1,298 @@
+{
+  "version": "33.0.0",
+  "artifacts": {
+    "WebappStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "WebappStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "WebappStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "WebappStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/751402d9f8a8c6a22c0937241a009ecda5bf05e92d67bd156f2de106038bb473.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "WebappStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "WebappStack.assets"
+      ],
+      "metadata": {
+        "/WebappStack/TheVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPC92636AB0"
+          }
+        ],
+        "/WebappStack/TheVPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet1Subnet770D4FF2"
+          }
+        ],
+        "/WebappStack/TheVPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet1RouteTable17DA183D"
+          }
+        ],
+        "/WebappStack/TheVPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet1RouteTableAssociationE5186D77"
+          }
+        ],
+        "/WebappStack/TheVPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet1DefaultRoute6D26543F"
+          }
+        ],
+        "/WebappStack/TheVPC/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet1EIP4412F690"
+          }
+        ],
+        "/WebappStack/TheVPC/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet1NATGatewayC61D892B"
+          }
+        ],
+        "/WebappStack/TheVPC/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet2Subnet73F96DA9"
+          }
+        ],
+        "/WebappStack/TheVPC/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet2RouteTable3609F42C"
+          }
+        ],
+        "/WebappStack/TheVPC/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet2RouteTableAssociationB4B0A733"
+          }
+        ],
+        "/WebappStack/TheVPC/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet2DefaultRouteFEB062B2"
+          }
+        ],
+        "/WebappStack/TheVPC/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet2EIP5AAFF9FA"
+          }
+        ],
+        "/WebappStack/TheVPC/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPublicSubnet2NATGatewayB437CFAF"
+          }
+        ],
+        "/WebappStack/TheVPC/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPrivateSubnet1Subnet571D3690"
+          }
+        ],
+        "/WebappStack/TheVPC/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPrivateSubnet1RouteTableF6513BC2"
+          }
+        ],
+        "/WebappStack/TheVPC/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPrivateSubnet1RouteTableAssociation46F1FFFC"
+          }
+        ],
+        "/WebappStack/TheVPC/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPrivateSubnet1DefaultRouteD1B9E467"
+          }
+        ],
+        "/WebappStack/TheVPC/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPrivateSubnet2SubnetCC3D7013"
+          }
+        ],
+        "/WebappStack/TheVPC/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPrivateSubnet2RouteTable9AC81FAC"
+          }
+        ],
+        "/WebappStack/TheVPC/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPrivateSubnet2RouteTableAssociation336D47D1"
+          }
+        ],
+        "/WebappStack/TheVPC/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCPrivateSubnet2DefaultRoute52A1F245"
+          }
+        ],
+        "/WebappStack/TheVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCIGWFA25CC08"
+          }
+        ],
+        "/WebappStack/TheVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCVPCGWC9B93E30"
+          }
+        ],
+        "/WebappStack/TheVPC/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TheVPCRestrictDefaultSecurityGroupCustomResourceAFA88FCE"
+          }
+        ],
+        "/WebappStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+          }
+        ],
+        "/WebappStack/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E"
+          }
+        ],
+        "/WebappStack/ASG/InstanceSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASGInstanceSecurityGroup0525485D"
+          }
+        ],
+        "/WebappStack/ASG/InstanceSecurityGroup/from WebappStackALBSecurityGroupFBAFFBEC:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASGInstanceSecurityGroupfromWebappStackALBSecurityGroupFBAFFBEC80D85F8872"
+          }
+        ],
+        "/WebappStack/ASG/InstanceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASGInstanceRoleE263A41B"
+          }
+        ],
+        "/WebappStack/ASG/InstanceProfile": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASGInstanceProfile0A2834D7"
+          }
+        ],
+        "/WebappStack/ASG/LaunchTemplate/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASGLaunchTemplate0CA92847"
+          }
+        ],
+        "/WebappStack/ASG/ASG": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ASG46ED3070"
+          }
+        ],
+        "/WebappStack/SsmParameterValue:--aws--service--ami-amazon-linux-latest--amzn-ami-hvm-x86_64-gp2:C96584B6-F00A-464E-AD19-53AFF4B05118.Parameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SsmParameterValueawsserviceamiamazonlinuxlatestamznamihvmx8664gp2C96584B6F00A464EAD1953AFF4B05118Parameter"
+          }
+        ],
+        "/WebappStack/ALB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBAEE750D2"
+          }
+        ],
+        "/WebappStack/ALB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBSecurityGroup8B8624F8"
+          }
+        ],
+        "/WebappStack/ALB/SecurityGroup/to WebappStackASGInstanceSecurityGroup25143199:80": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBSecurityGrouptoWebappStackASGInstanceSecurityGroup25143199801DD113C9"
+          }
+        ],
+        "/WebappStack/ALB/WebListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBWebListener15BF7729"
+          }
+        ],
+        "/WebappStack/ALB/WebListener/TargetGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ALBWebListenerTargetGroup95538266"
+          }
+        ],
+        "/WebappStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/WebappStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/WebappStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/WebappStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "WebappStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
